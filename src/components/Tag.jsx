@@ -9,7 +9,7 @@ import useGif from "../hooks/useGif";
 const Tag = () => {
 
   const [tag, setTag] = useState(''); 
-  // const [gif, setGif] = useState(''); 
+  // const [gifSrc, setGifSrc] = useState(''); 
   // const [loader, setLoader] = useState('false'); 
  
   
@@ -18,7 +18,7 @@ const Tag = () => {
   //   const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${tag}`;
   //   const {data} = await axios.get(url); 
   //   const imageSource = data.data.images.downsized_large.url;
-  //   setGif(imageSource); 
+  //   setGifSrc(imageSource); 
   //   setLoader(false); 
   // }
 
@@ -29,7 +29,7 @@ const Tag = () => {
   //   []
   // )
 
-  const {gif, loader, fetchData} = useGif(tag); //Using Custom Hook useGif for code reusability
+  const {gifSrc, loader, fetchData} = useGif(tag); //Using Custom Hook useGif for code reusability
 
   return (
     <div className="w-1/2 bg-blue-500 rounded-lg border border-black 
@@ -37,7 +37,7 @@ const Tag = () => {
       <h1 className=" mt-[15px] text-2xl font-bold underline uppercase">Gif for You</h1>
 
       {
-        loader?(<Spinner/>):(<img src={gif} width="450" />)  
+        loader?(<Spinner/>):(<img src={gifSrc} width="200px" height="200px" />)  
       } 
 
       <input

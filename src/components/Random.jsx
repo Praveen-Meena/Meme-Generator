@@ -7,7 +7,7 @@ import useGif from "../hooks/useGif";
 
 const Random = () => {
 
-  // const [gif, setGif] = useState(''); 
+  // const [gifSrc, setGifSrc] = useState(''); 
   // const [loader, setLoader] = useState('false'); 
  
   
@@ -16,7 +16,7 @@ const Random = () => {
   //   const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
   //   const {data} = await axios.get(url); 
   //   const imageSource = data.data.images.downsized_large.url;
-  //   setGif(imageSource); 
+  //   setGifSrc(imageSource); 
   //   setLoader(false); 
   // }
 
@@ -27,7 +27,7 @@ const Random = () => {
   //   []
   // )
 
-  const {gif, loader, fetchData} = useGif();   //using custom Hook for code reusability
+  const {gifSrc, loader, fetchData} = useGif();   //using custom Hook useGif for code reusability
   
   return (
     <div className="w-1/2 bg-green-500 rounded-lg border border-black 
@@ -35,7 +35,7 @@ const Random = () => {
       <h1 className=" mt-[15px] text-2xl font-bold underline uppercase">A Random Gif</h1>
 
       {
-        loader?(<Spinner/>):(<img src={gif} width="450" />)  
+        loader?(<Spinner/>):(<img src={gifSrc} width="200px" height="200px" />)  
       } 
 
       <button onClick={() => fetchData()} 
