@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from "react";
+// import React from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
@@ -23,7 +24,7 @@ const useGif = (tag) => {
       },
       []
     )
-   
+  
    return {gifSrc, loader, fetchData}; 
 };
 

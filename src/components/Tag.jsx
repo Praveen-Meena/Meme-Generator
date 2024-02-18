@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
+// import {useEffect} from "react";
 import Spinner from "./Spinner";
-import axios from "axios";
+// import axios from "axios";
 import useGif from "../hooks/useGif";
 
 
