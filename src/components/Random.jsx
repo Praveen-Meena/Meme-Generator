@@ -35,7 +35,7 @@ const Random = () => {
       <h1 className=" mt-[15px] text-2xl font-bold underline uppercase">A Random Gif</h1>
 
       {
-        loader?(<Spinner/>):(<img src={gifSrc} width="200px" height="200px" />)  
+        loader?(<Spinner/>):(<img src={gifSrc} width="200px" height="200px" alt="gif" />)  
       } 
 
       <button onClick={() => fetchData()} 
